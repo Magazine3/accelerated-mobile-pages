@@ -25,32 +25,47 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amp-wordpress-theme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amp-wordpress-theme' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="container">
+			<div class="head">
+				<div class="hamburger-menu">
+					<a href="#" class="amp-sidebar-toggle">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+				</div>
+				<div class="logo">
+	              <a href="<?php bloginfo('url'); ?>">
+	                <?php 
+	                $custom_logo_id = get_theme_mod( 'custom_logo' );
+	                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	                if ( has_custom_logo() ) {
+	                    echo '<img src="'. esc_url( $logo[0] ) .'">';
+	                } else {
+	                    echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
+	                } ?>
+	              </a>
+	            </div><!-- /.logo -->
+                <div class="h-srch h-ic">
+                    <a class="lb icon-search" href="#search"></a>
+                    <div class="lb-btn"> 
+                        <div class="lb-t" id="search">
+                           <?php amp_search();?>
+                           <a class="lb-x" href="#"></a>
+                        </div> 
+                    </div>
+                </div><!-- /.search -->
+		    </div>
+		</div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container">
+		<nav id="site-navigation" class="main-navigation">
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amp-wordpress-theme' ); ?></button>
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			) );
+		?>
+	</nav><!-- #site-navigation -->
