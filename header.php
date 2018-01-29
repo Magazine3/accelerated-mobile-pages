@@ -32,21 +32,19 @@
 	                  <span class="sr-only">toggle navigation</span>
 	                  <span class="drawer-hamburger-icon"></span>
 	                </button>
-	                <div class="dummy">
-		                <nav class="drawer-nav" role="navigation">
-		                  <div class="drawer-menu">
-		                      <!-- <h3><?php echo esc_attr_x( 'Navigate', 'newsdesk_theme' ) ?></h3> -->
-		                    <?php
-		                    if ( has_nav_menu( 'header-menu' ) ) {
-		                      wp_nav_menu(array(
-		                    	'theme_location' => 'header-menu',
-								'menu_id'        => 'header-menu',
-		                    ));
-		                    } ?>
-		                  </div>
-		                  <span class="icon-close drawer-toggle"></span>
-		                </nav>
-		             </div>
+	                <nav class="drawer-nav" role="navigation">
+	                  <div class="drawer-menu">
+	                      <!-- <h3><?php echo esc_attr_x( 'Navigate', 'newsdesk_theme' ) ?></h3> -->
+	                    <?php
+	                    if ( has_nav_menu( 'header-menu' ) ) {
+	                      wp_nav_menu(array(
+	                    	'theme_location' => 'header-menu',
+							'menu_class'        => 'header-menu',
+	                    ));
+	                    } ?>
+	                  </div>
+	                  <span class="icon-close drawer-toggle"></span>
+	                </nav>
                 </div><!-- /.mobile-menu -->
 				<div class="logo">
 	              <a href="<?php bloginfo('url'); ?>">
