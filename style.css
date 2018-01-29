@@ -967,6 +967,7 @@ object {
 .logo{
     flex-grow: 1;
     text-align: center;
+    z-index: 2;
 }
 .h-srch{
 	 align-items: center;
@@ -995,7 +996,8 @@ object {
 .h-ic a:after, .h-ic a:before{    
     color:rgba(51,51,51,1);
     font-family: 'icomoon';
-    font-size: 18px;
+    font-size: 23px;
+    font-weight: 600;
 }
 .h-ic a{
 	text-decoration: none;
@@ -1010,6 +1012,7 @@ object {
     transition: opacity .5s ease-in-out;
     overflow: hidden;
     z-index:9;
+    background: rgba(20, 20, 22, 0.9);
 }
 .lb-t img {
     margin: auto;
@@ -1041,12 +1044,10 @@ a.lb-x {
     transition: .5s ease-in-out;
 }
 a.lb-x:after {
-    content: "\e5cd";
+    content: "\e907";
     font-family: 'icomoon';
     font-size: 30px;
-    <?php if($redux_builder_amp['swift-element-overlay-color-control'] ['rgba']){?>
-        color: <?php echo $redux_builder_amp['swift-element-overlay-color-control']['rgba']?>;
-    <?php } ?> 
+    color: rgba(255, 255, 255, 0.8);
     line-height: 0;
     display: block;
     text-indent: 1px;
@@ -1065,9 +1066,6 @@ a.lb-x:after {
 .lb-t:target a.lb-x {
     top: 25px;
 }
-.lb img{
-    cursor:pointer;
-}
 .lb-btn form{
     position: absolute;
     top: 200px;
@@ -1076,47 +1074,27 @@ a.lb-x:after {
     margin: 0 auto;
     text-align: center;
 }
-.lb-btn form #s{
-    padding:10px;
-}
-.lb-btn form #amp-search-submit{
-    padding:10px;
-    cursor:pointer;
-}
-.amp-search-wrapper{
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-}
-.overlay-search:before {
-    content: "\e8b6";
-    position: absolute;
-    right:0;
-    font-size: 24px;
-    font-family: 'icomoon';
-    cursor: pointer;
-   
-        color: <?php echo $redux_builder_amp['swift-element-overlay-color-control']['rgba']?>;
-    top:4px;
-}
-.lb-btn form #amp-search-submit {
+.lb-btn form .search-submit {
     cursor: pointer;
     background:transparent;
     border: none;
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    opacity: 0;
-    position: absolute;
-    z-index:100;
-    right: 0;
-    top: 0;
 }
-.lb-btn form #s {
+.search-overlay:after{
+	content: "\e901";
+	font-family: 'icomoon';
+	cursor: pointer;
+	font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    right: 30px;
+    top: 4px;
+}
+.lb-btn .search-field {
     padding: 10px;
     background: transparent;
     border: none;
     border-bottom: 1px solid #504c4c;
     color: #fff;
-    width:100%;
+    width:80%;
 }

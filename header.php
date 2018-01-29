@@ -27,13 +27,31 @@
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="head">
-				<div class="hamburger-menu">
-					<a href="#" class="amp-sidebar-toggle">
+				<!-- <div class="hamburger-menu">
+					<a href="#" class="amp-sidebar-toggle .icon-menu">
 							<span></span>
 							<span></span>
 							<span></span>
 						</a>
-				</div>
+				</div> -->
+				<div class="mobile-menu hamburger-menu">
+                <button type="button" class="drawer-toggle drawer-hamburger">
+                  <span class="sr-only">toggle navigation</span>
+                  <span class="drawer-hamburger-icon"></span>
+                </button>
+                <nav class="drawer-nav" role="navigation">
+                  <div class="drawer-menu">
+                      <h3><?php echo esc_attr_x( 'Navigate', 'newsdesk_theme' ) ?></h3>
+                    <?php
+                    if ( has_nav_menu( 'mobile_menu' ) ) {
+                      wp_nav_menu(array(
+                      'theme_location' => 'mobile_menu',
+                      'menu_class'     => 'headertop-menu',
+                    ));
+                    } ?>
+                  </div>
+                </nav>
+              </div><!-- /.mobile-menu -->
 				<div class="logo">
 	              <a href="<?php bloginfo('url'); ?>">
 	                <?php 
@@ -47,10 +65,24 @@
 	              </a>
 	            </div><!-- /.logo -->
                 <div class="h-srch h-ic">
-                    <a class="lb icon-search" href="#search"></a>
+                    <a class="lb icon-search2" href="#search"></a>
                     <div class="lb-btn"> 
                         <div class="lb-t" id="search">
-                           <?php amp_search();?>
+                           <form role="search" method="get" class="mk-fullscreen-searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		                      <label>
+		                          <span class="text-above-search-bar"></span>
+		                          <input type="search" class="search-field"
+		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'amp_wp_theme' ) ?>"
+		                              value="<?php echo esc_attr( get_search_query() ); ?>" name="s"
+		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp_wp_theme' ) ?>" id="mk-fullscreen-search-input"/>
+		                      </label>
+		                      <label class="search-button search-overlay">
+		                          <i class="fa fa-search" aria-hidden="true"></i>
+		                      <input type="submit" class="search-submit"
+		                          value="<?php echo esc_attr_x( '', 'label', 'amp_wp_theme' ) ?>" />
+		                      </label>
+		                      <!-- <div class="overlay-search"></div> -->
+		                  </form>
                            <a class="lb-x" href="#"></a>
                         </div> 
                     </div>
