@@ -879,55 +879,72 @@ object {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-right:before {
+.icon-angle-down:before {
+  content: "\e903";
+}
+.icon-angle-up:before {
+  content: "\e904";
+}
+.icon-angle-right:before {
+  content: "\e905";
+}
+.icon-cross:before {
+  content: "\e906";
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-menu:before {
   content: "\e900";
 }
-.icon-arrow-left:before {
-  content: "\e901";
-}
-.icon-search:before {
+.icon-menu2:before {
   content: "\e902";
 }
 .icon-mail-envelope-closed:before {
-  content: "\e90d";
+  content: "\e908";
 }
 .icon-search2:before {
-  content: "\e903";
+  content: "\e901";
+}
+.icon-whatsapp:before {
+  content: "\e909";
+}
+.icon-brand:before {
+  content: "\e909";
+}
+.icon-social:before {
+  content: "\e909";
 }
 .icon-facebook:before {
-  content: "\e904";
+  content: "\e90a";
   color: #3b5998;
 }
-.icon-gmail:before {
-  content: "\e905";
-  color: #d14836;
-}
 .icon-googleplus:before {
-  content: "\e906";
+  content: "\e90b";
   color: #dc4e41;
 }
-.icon-instagram:before {
-  content: "\e907";
-  color: #e4405f;
-}
 .icon-linkedin:before {
-  content: "\e908";
+  content: "\e90c";
   color: #0077b5;
 }
+.icon-odnoklassniki:before {
+  content: "\e90d";
+  color: #f4731c;
+}
 .icon-pinterest:before {
-  content: "\e909";
+  content: "\e90e";
   color: #bd081c;
 }
 .icon-twitter:before {
-  content: "\e90a";
+  content: "\e90f";
   color: #1da1f2;
 }
-.icon-whatsapp:before {
-  content: "\e90b";
+.icon-whatsapp2:before {
+  content: "\e910";
   color: #25d366;
 }
 .icon-youtube:before {
-  content: "\e90c";
+  content: "\e911";
   color: #f00;
 }
 
