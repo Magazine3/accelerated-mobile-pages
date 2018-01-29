@@ -27,31 +27,27 @@
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="head">
-				<!-- <div class="hamburger-menu">
-					<a href="#" class="amp-sidebar-toggle .icon-menu">
-							<span></span>
-							<span></span>
-							<span></span>
-						</a>
-				</div> -->
-				<div class="mobile-menu hamburger-menu">
-                <button type="button" class="drawer-toggle drawer-hamburger">
-                  <span class="sr-only">toggle navigation</span>
-                  <span class="drawer-hamburger-icon"></span>
-                </button>
-                <nav class="drawer-nav" role="navigation">
-                  <div class="drawer-menu">
-                      <h3><?php echo esc_attr_x( 'Navigate', 'newsdesk_theme' ) ?></h3>
-                    <?php
-                    if ( has_nav_menu( 'mobile_menu' ) ) {
-                      wp_nav_menu(array(
-                      'theme_location' => 'mobile_menu',
-                      'menu_class'     => 'headertop-menu',
-                    ));
-                    } ?>
-                  </div>
-                </nav>
-              </div><!-- /.mobile-menu -->
+				<div class="hamburger-menu drawer drawer--left">
+	                <button type="button" class="drawer-toggle drawer-hamburger">
+	                  <span class="sr-only">toggle navigation</span>
+	                  <span class="drawer-hamburger-icon"></span>
+	                </button>
+	                <div class="dummy">
+		                <nav class="drawer-nav" role="navigation">
+		                  <div class="drawer-menu">
+		                      <!-- <h3><?php echo esc_attr_x( 'Navigate', 'newsdesk_theme' ) ?></h3> -->
+		                    <?php
+		                    if ( has_nav_menu( 'header-menu' ) ) {
+		                      wp_nav_menu(array(
+		                    	'theme_location' => 'header-menu',
+								'menu_id'        => 'header-menu',
+		                    ));
+		                    } ?>
+		                  </div>
+		                  <span class="icon-close drawer-toggle"></span>
+		                </nav>
+		             </div>
+                </div><!-- /.mobile-menu -->
 				<div class="logo">
 	              <a href="<?php bloginfo('url'); ?>">
 	                <?php 
@@ -87,8 +83,8 @@
                         </div> 
                     </div>
                 </div><!-- /.search -->
-		    </div>
-		</div>
+		    </div><!-- /.head -->
+		</div><!-- /.container -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container">
@@ -96,7 +92,7 @@
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amp-wordpress-theme' ); ?></button>
 		<?php
 			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
+				'theme_location' => 'primary-menu',
 				'menu_id'        => 'primary-menu',
 			) );
 		?>
