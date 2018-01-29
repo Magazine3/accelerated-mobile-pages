@@ -84,14 +84,14 @@
 		    </div><!-- /.head -->
 		</div><!-- /.container -->
 	</header><!-- #masthead -->
-
+	<div class="p-m-fl">
+		<div class="p-menu">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary-menu',
+					'menu_id'        => 'primary-menu',
+				) );
+			?>
+		</div><!-- /.p-menu -->
+	</div><!-- /.p-m-fl -->
 	<div id="content" class="site-content container">
-		<nav id="site-navigation" class="main-navigation">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amp-wordpress-theme' ); ?></button>
-		<?php
-			wp_nav_menu( array(
-				'theme_location' => 'primary-menu',
-				'menu_id'        => 'primary-menu',
-			) );
-		?>
-	</nav><!-- #site-navigation -->
