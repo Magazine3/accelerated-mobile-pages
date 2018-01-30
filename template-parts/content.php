@@ -10,7 +10,7 @@
 ?>
 	<div class="fsp">
 		<div class="fsp-img">
-			<?php the_post_thumbnail('module-1'); ?>
+			<a href="<?php the_permalink();?>"><?php the_post_thumbnail('module-1'); ?></a>
 		</div>
 		<div class="fsp-cnt">
 			<div class="category-lists">

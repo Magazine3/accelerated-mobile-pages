@@ -37,11 +37,15 @@ get_header(); ?>
 					 */
 					get_template_part( 'template-parts/content', get_post_format() );
 
-				endwhile;
+				endwhile; ?>
 
-				the_posts_navigation();
+				<div class="pagination">
+                   <div class="pagination-prev"><?php previous_posts_link( $label ); ?> </div>
+                   <div class="pagination-next"><?php next_posts_link( $label , $max_pages ); ?> </div>    
+              </div>
 
-				else :
+
+			<?php 	else :
 
 				get_template_part( 'template-parts/content', 'none' );
 
