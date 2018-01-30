@@ -485,15 +485,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #005be2;
 }
 
 a:visited {
-	color: purple;
+	color: #005be2;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #005be2;
 }
 
 a:focus {
@@ -1290,6 +1290,9 @@ body a{
     -webkit-transition: all 0.3s ease-in-out 0s;
 }
 /** Header **/
+header{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
 .head{
     width: 100%;
     clear: both;
@@ -1495,8 +1498,49 @@ body a{
 .site-footer{
 	display: inline-block;
 	width:100%;
+	clear: both;
+}
+.footer-widgets, .site-info{
 	border-top:1px solid #eee;
 	padding: 50px 0px;
+}
+.f-w{
+	display: inline-flex;
+    width: 100%;
+}
+.w-bl {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1 0 22%;
+    margin: 0 15px;
+}
+.w-bl .search-field{
+	width:70%;
+}
+.w-bl .search-submit{
+    padding: 11px 11px 7px 12px;
+}
+.w-bl h4 {
+    color: #999;
+    font-size: 12px;
+    font-weight: 500;
+    margin:0px 0px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+}
+.w-bl ul{
+	margin: 0;
+	padding:0;
+}
+.w-bl ul li {
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 .footer-menu {
 	text-align: center;
