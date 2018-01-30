@@ -96,4 +96,4 @@
 		</div><!-- /.p-menu -->
 	</div><!-- /.p-m-fl -->
 	<?php } ?>
-	<div id="content" class="site-content container">
+	<div id="content" class="site-content">
