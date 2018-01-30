@@ -1290,7 +1290,7 @@ body a{
     -webkit-transition: all 0.3s ease-in-out 0s;
 }
 /** Header **/
-header{
+.site-header{
 	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .head{
@@ -1493,6 +1493,24 @@ header{
     border-radius: 46px;
     font-size: 14px;
     display: inline-block;
+}
+/*** Archives ***/
+.page-header{
+	margin-bottom: 30px;
+}
+.archive-title {
+    margin:0px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.archive-description{
+	font-size: 14px;
+    margin: 8px 0px 0px 0px;
+    color: #333;
+    line-height: 20px;
+}
+.archive-description p{
+	margin:0;
 }
 /*** Footer ***/
 .site-footer{

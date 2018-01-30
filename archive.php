@@ -17,11 +17,11 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="page-title archive-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+			<div class="loop-wrapper">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -33,16 +33,19 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_navigation();
+			<div class="pagination">
+                   <div class="pagination-prev"><?php previous_posts_link( $label ); ?> </div>
+                   <div class="pagination-next"><?php next_posts_link( $label , $max_pages ); ?> </div>    
+            </div>
 
-		else :
+		<?php else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
