@@ -84,6 +84,7 @@
 		    </div><!-- /.head -->
 		</div><!-- /.container -->
 	</header><!-- #masthead -->
+	<?php if ( has_nav_menu( 'primary-menu' ) ) { ?>
 	<div class="p-m-fl">
 		<div class="p-menu">
 			<?php
@@ -91,7 +92,8 @@
 					'theme_location' => 'primary-menu',
 					'menu_id'        => 'primary-menu',
 				) );
-			?>
+			 ?>
 		</div><!-- /.p-menu -->
 	</div><!-- /.p-m-fl -->
+	<?php } ?>
 	<div id="content" class="site-content container">

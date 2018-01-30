@@ -47,6 +47,7 @@ if ( ! function_exists( 'amp_wordpress_theme_setup' ) ) :
 		register_nav_menus( array(
 			'header-menu' => esc_html__( 'Header Menu', 'amp-wordpress-theme' ),
 			'primary-menu' => esc_html__( 'Primary', 'amp-wordpress-theme' ),
+			'footer-menu' => esc_html__( 'Footer', 'amp-wordpress-theme' ),
 		) );
 
 		/*
@@ -109,6 +110,16 @@ function amp_wordpress_theme_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'amp-wordpress-theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widget', 'amp-wordpress-theme' ),
+		'id'            => 'footer-widget',
+		'description'   => esc_html__( 'Add widgets here.', 'amp-wordpress-theme' ),
+		'before_widget' => '<div class="w-bl">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );

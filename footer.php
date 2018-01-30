@@ -14,19 +14,33 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="container">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amp-wordpress-theme' ) ); ?>"><?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'amp-wordpress-theme' ), 'WordPress' );
-				?></a>
-				<span class="sep"> | </span>
-				<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'amp-wordpress-theme' ), 'amp-wordpress-theme', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-			</div><!-- .site-info -->
-		</div><!-- /.container -->
+		<?php if ( is_active_sidebar( 'footer-widget' )  ) : ?>
+		<div class="footer-widgets">
+			<div class="container">
+				<div class="f-w">
+					<?php dynamic_sidebar( 'footer-widget' ); ?>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
+		<div class="site-info">
+			<div class="container">
+				<?php if ( has_nav_menu( 'footer-menu' ) ) { ?>
+				<div class="footer-menu">
+					<?php
+	                      wp_nav_menu(array(
+	                    	'theme_location' 	=> 'footer-menu',
+							'menu_class'        => 'header-menu',
+	                    ));
+	                     ?>
+				</div>
+				<?php } ?>
+				<div class="rr">
+					<span>All Rights Reserved </span>
+					<a href="#">View Non-AMP Version</a>
+				</div>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
