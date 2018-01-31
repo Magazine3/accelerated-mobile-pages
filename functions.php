@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package amp-wordpress-theme
+ * @package amp_wordpress_theme
  */
 
-if ( ! function_exists( 'amp-wordpress-theme_setup' ) ) :
+if ( ! function_exists( 'amp_wordpress_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,9 +20,9 @@ if ( ! function_exists( 'amp-wordpress-theme_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on AMP wordpress Theme, use a find and replace
-		 * to change 'amp-wordpress-theme' to the name of your theme in all the template files.
+		 * to change 'amp_wordpress_theme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'amp-wordpress-theme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'amp_wordpress_theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -45,9 +45,9 @@ if ( ! function_exists( 'amp-wordpress-theme_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'header-menu' => esc_html__( 'Header Menu', 'amp-wordpress-theme' ),
-			'primary-menu' => esc_html__( 'Primary', 'amp-wordpress-theme' ),
-			'footer-menu' => esc_html__( 'Footer', 'amp-wordpress-theme' ),
+			'header-menu' => esc_html__( 'Header Menu', 'amp_wordpress_theme' ),
+			'primary-menu' => esc_html__( 'Primary', 'amp_wordpress_theme' ),
+			'footer-menu' => esc_html__( 'Footer', 'amp_wordpress_theme' ),
 		) );
 
 		/*
@@ -63,7 +63,7 @@ if ( ! function_exists( 'amp-wordpress-theme_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'amp-wordpress-theme_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'amp_wordpress_theme_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -94,7 +94,7 @@ add_action( 'after_setup_theme', 'amp_wordpress_theme_setup' );
  * @global int $content_width
  */
 function amp_wordpress_theme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'amp-wordpress-theme_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'amp_wordpress_theme_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'amp_wordpress_theme_content_width', 0 );
 
@@ -105,9 +105,9 @@ add_action( 'after_setup_theme', 'amp_wordpress_theme_content_width', 0 );
  */
 function amp_wordpress_theme_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'amp-wordpress-theme' ),
+		'name'          => esc_html__( 'Sidebar', 'amp_wordpress_theme' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'amp-wordpress-theme' ),
+		'description'   => esc_html__( 'Add widgets here.', 'amp_wordpress_theme' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -115,9 +115,9 @@ function amp_wordpress_theme_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget', 'amp-wordpress-theme' ),
+		'name'          => esc_html__( 'Footer Widget', 'amp_wordpress_theme' ),
 		'id'            => 'footer-widget',
-		'description'   => esc_html__( 'Add widgets here.', 'amp-wordpress-theme' ),
+		'description'   => esc_html__( 'Add widgets here.', 'amp_wordpress_theme' ),
 		'before_widget' => '<div class="w-bl">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',

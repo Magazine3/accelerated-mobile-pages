@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package amp-wordpress-theme
+ * @package amp_wordpress_theme
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amp-wordpress-theme' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amp_wordpress_theme' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="container">
@@ -65,14 +65,14 @@
 		                      <label>
 		                          <span class="text-above-search-bar"></span>
 		                          <input type="search" class="search-field"
-		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'amp-wordpress-theme' ) ?>"
+		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'amp_wordpress_theme' ) ?>"
 		                              value="<?php echo esc_attr( get_search_query() ); ?>" name="s"
-		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp-wordpress-theme' ) ?>" id="mk-fullscreen-search-input"/>
+		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp_wordpress_theme' ) ?>" id="mk-fullscreen-search-input"/>
 		                      </label>
 		                      <label class="search-button search-overlay">
 		                          <i class="fa fa-search" aria-hidden="true"></i>
 		                      <input type="submit" class="search-submit"
-		                          value="<?php echo esc_attr_x( '', 'label', 'amp-wordpress-theme' ) ?>" />
+		                          value="<?php echo esc_attr_x( '', 'label', 'amp_wordpress_theme' ) ?>" />
 		                      </label>
 		                      <!-- <div class="overlay-search"></div> -->
 		                  </form>
