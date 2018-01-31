@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
 ?>
@@ -34,7 +34,6 @@
 	                </button>
 	                <nav class="drawer-nav" role="navigation">
 	                  <div class="drawer-menu">
-	                      <!-- <h3><?php echo esc_attr_x( 'Navigate', 'newsdesk_theme' ) ?></h3> -->
 	                    <?php
 	                    if ( has_nav_menu( 'header-menu' ) ) {
 	                      wp_nav_menu(array(
@@ -47,7 +46,7 @@
 	                </nav>
                 </div><!-- /.mobile-menu -->
 				<div class="logo">
-	              <a href="<?php bloginfo('url'); ?>">
+	              <a href="<?php echo esc_url( home_url() ); ?>">
 	                <?php 
 	                $custom_logo_id = get_theme_mod( 'custom_logo' );
 	                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -66,14 +65,14 @@
 		                      <label>
 		                          <span class="text-above-search-bar"></span>
 		                          <input type="search" class="search-field"
-		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'amp_wp_theme' ) ?>"
+		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'amp-wordpress-theme' ) ?>"
 		                              value="<?php echo esc_attr( get_search_query() ); ?>" name="s"
-		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp_wp_theme' ) ?>" id="mk-fullscreen-search-input"/>
+		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp-wordpress-theme' ) ?>" id="mk-fullscreen-search-input"/>
 		                      </label>
 		                      <label class="search-button search-overlay">
 		                          <i class="fa fa-search" aria-hidden="true"></i>
 		                      <input type="submit" class="search-submit"
-		                          value="<?php echo esc_attr_x( '', 'label', 'amp_wp_theme' ) ?>" />
+		                          value="<?php echo esc_attr_x( '', 'label', 'amp-wordpress-theme' ) ?>" />
 		                      </label>
 		                      <!-- <div class="overlay-search"></div> -->
 		                  </form>

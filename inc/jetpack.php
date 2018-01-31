@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function amp_wordpress_theme_jetpack_setup() {
+function amp-wordpress-theme_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'amp_wordpress_theme_infinite_scroll_render',
+		'render'    => 'amp-wordpress-theme_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -42,12 +42,12 @@ function amp_wordpress_theme_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'amp_wordpress_theme_jetpack_setup' );
+add_action( 'after_setup_theme', 'amp-wordpress-theme_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function amp_wordpress_theme_infinite_scroll_render() {
+function amp-wordpress-theme_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

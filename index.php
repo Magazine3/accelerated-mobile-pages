@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
 get_header(); ?>

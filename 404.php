@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
 get_header(); ?>

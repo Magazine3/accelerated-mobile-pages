@@ -4,10 +4,10 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
-if ( ! function_exists( 'amp_wordpress_theme_posted_on' ) ) :
+if ( ! function_exists( 'amp-wordpress-theme_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
@@ -79,7 +79,7 @@ if ( ! function_exists( 'amp_wordpress_theme_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'amp-wordpress-theme' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'amp_wordpress_theme' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -96,7 +96,7 @@ if ( ! function_exists( 'amp_wordpress_theme_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'amp-wordpress-theme' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'amp_wordpress_theme' ),
 					array(
 						'span' => array(
 							'class' => array(),

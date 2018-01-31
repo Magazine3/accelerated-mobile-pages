@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
-if ( ! function_exists( 'amp_wordpress_theme_setup' ) ) :
+if ( ! function_exists( 'amp-wordpress-theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -63,7 +63,7 @@ if ( ! function_exists( 'amp_wordpress_theme_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'amp_wordpress_theme_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'amp-wordpress-theme_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -94,7 +94,7 @@ add_action( 'after_setup_theme', 'amp_wordpress_theme_setup' );
  * @global int $content_width
  */
 function amp_wordpress_theme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'amp_wordpress_theme_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'amp-wordpress-theme_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'amp_wordpress_theme_content_width', 0 );
 

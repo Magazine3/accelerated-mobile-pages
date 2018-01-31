@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
 ?>
@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php amp_wordpress_theme_post_thumbnail(); ?>
+	<?php amp-wordpress-theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

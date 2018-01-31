@@ -2,7 +2,7 @@
 /**
  * AMP wordpress Theme Theme Customizer
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
 /**
@@ -18,11 +18,11 @@ function amp_wordpress_theme_customize_register( $wp_customize ) {
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
-			'render_callback' => 'amp_wordpress_theme_customize_partial_blogname',
+			'render_callback' => 'amp-wordpress-theme_customize_partial_blogname',
 		) );
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
-			'render_callback' => 'amp_wordpress_theme_customize_partial_blogdescription',
+			'render_callback' => 'amp-wordpress-theme_customize_partial_blogdescription',
 		) );
 	}
 }

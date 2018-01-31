@@ -31,11 +31,11 @@
 					the_content();
 
 					wp_link_pages( array(
-						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'amp_wordpress_theme' ) . '</span>',
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'amp-wordpress-theme' ) . '</span>',
 						'after'       => '</div>',
 						'link_before' => '<span>',
 						'link_after'  => '</span>',
-						'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'amp_wordpress_theme' ) . ' </span>%',
+						'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'amp-wordpress-theme' ) . ' </span>%',
 						'separator'   => '<span class="screen-reader-text">, </span>',
 					) );
 
@@ -50,7 +50,7 @@
 				</div><!-- /.post-author-image -->
 				<div class="post-author-desc">
 					<span><?php the_author_link(); ?></span>
-					<p><?php the_author_description(); ?></p>
+					<p><?php the_author_meta('description'); ?></p>
 				</div><!-- /.post-author-desc -->
 			</div>
 			<?php the_post_navigation(); ?>

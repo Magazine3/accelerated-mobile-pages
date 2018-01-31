@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package AMP_wordpress_Theme
+ * @package amp-wordpress-theme
  */
 
 ?>
