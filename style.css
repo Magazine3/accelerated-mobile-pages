@@ -1727,6 +1727,7 @@ body a{
 	padding:5px 7px;
 	font-size: 16px;
 	display: inline-block;
+	border-radius: 2px;
 }
 .social-share-btns ul li a:before{
     color: #fff;
@@ -1779,4 +1780,86 @@ body a{
 }
 .post-edit-link{
 	float: right;
+}
+.post-author-info {
+    padding: 20px 20px;
+    border-radius: 0;
+    background: #f9f9f9;
+    border: 1px solid #ececec;
+    display: inline-block;
+    width: 100%;
+}
+.post-aurhor-image{
+    float: left;
+}
+.post-aurhor-image img {
+    border-radius: 50%;
+    margin: 0px 12px 10px 0px;
+    display: block;
+    width: 60px;
+    height:60px;
+}
+.post-author-desc p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: #666;
+    padding-top: 4px;
+}
+.nav-links {
+    margin-top: 30px !important;
+    border-top: 1px dotted #ccc;
+    padding: 20px 5px 0px 5px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.nav-links .nav-next {
+    float: right;
+    width: 45%;
+    text-align: right;
+    position: relative;
+    margin-top: 10px;
+}
+.nav-links .nav-previous{
+	float: left;
+    width: 45%;
+    position: relative;
+    margin-top: 10px;
+}
+.nav-links .nav-next a, .nav-links .nav-previous a {
+    color: #333;
+    position: relative;
+}
+.nav-links .nav-next a:hover, .nav-links .nav-previous a:hover {
+	color:#005be2;
+}
+.nav-links .nav-previous:after {
+    border-left: 1px dotted #ccc;
+    content: "";
+    height: calc(100% - -10px);
+    right: -50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    width: 2px;
+}
+.nav-links .nav-previous:before {
+    content: "PREVIOUS";
+    position: absolute;
+    top: -25px;
+    font-size: 12px;
+    color: #666;
+    display: block;
+    font-weight: 400;
+}
+.nav-links .nav-next:before {
+	content: "NEXT";
+    position: absolute;
+    top: -25px;
+    right:0;
+    font-size: 12px;
+    color: #666;
+    display: block;
+    font-weight: 400;
 }

@@ -42,6 +42,21 @@
 				get_template_part( 'template-parts/biography' );
 			}
 		?>
+		<div class="post-author-info">
+			<div class="post-aurhor-image">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+			</div><!-- /.post-author-image -->
+			<div class="post-author-desc">
+				<span><?php the_author_link(); ?></span>
+				<p><?php the_author_description(); ?></p>
+			</div><!-- /.post-author-desc -->
+		</div>
+		<?php the_post_navigation(); ?>
+		<div class="comments">
+		<?php if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif; ?>
+		</div>
 		</div>
 		<div class="left-part">
 			<div class="social-share-btns">
@@ -68,8 +83,7 @@
 		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<div class="container">
+	<footer class="entry-footer container">
 		<?php
 			edit_post_link(
 				sprintf(
@@ -81,6 +95,5 @@
 				'</span>'
 			);
 		?>
-		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
