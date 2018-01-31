@@ -54,9 +54,12 @@
 				</div><!-- /.post-author-desc -->
 			</div>
 			<?php the_post_navigation(); ?>
-			<?php if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif; ?>
+			<div class="cmts">
+				<span class="view-cmts">VIEW COMMENTS</span>
+				<?php if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif; ?>
+			</div>
 		</div>
 		<div class="left-part">
 			<div class="social-share-btns">
