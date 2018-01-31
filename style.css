@@ -1297,7 +1297,7 @@ a.lb-x:after {
     width:80%;
 }
 /*** Transitions ***/
-body a{
+body a, .rp-list{
     transition: all 0.3s ease-in-out 0s;
     -webkit-transition: all 0.3s ease-in-out 0s;
 }
@@ -1454,6 +1454,7 @@ body a{
     font-size:20px;
     line-height:25px;
     font-weight:500;
+    padding: 0;
 }
 .fsp h2 a{
 	color:#191919;
@@ -1706,7 +1707,7 @@ body a{
     padding-bottom: 20px;
     border-bottom: 1px dotted #ccc;
 }
-.social-share-btns span, .post-athr .pb-txt, .tgs span, .pt-dt{
+.social-share-btns span, .post-athr .pb-txt, .tgs span, .pt-dt, .related-posts h3, .recent-post h3{
     text-transform: uppercase;
     font-size: 12px;
     color: #666;
@@ -1748,10 +1749,14 @@ body a{
 .ic-5{
 	background: #0077b5;
 }
-.right-part p{
+.content-pt p{
 	font-size: 18px;
     color: #000;
     line-height: 1.7;
+}
+.content-pt a{
+	margin:10px 0px;
+	display: inline-block;
 }
 .post-athr, .tgs, .pt-dt {
     margin-top: 20px;
@@ -1862,4 +1867,34 @@ body a{
     color: #666;
     display: block;
     font-weight: 400;
+}
+.rp-list{
+	margin-bottom:24px;
+}
+.rp-list:hover {
+    opacity: 0.7;
+}
+.rp-list:hover h4{
+	color:#005be2;
+}
+.rp-img a{
+	line-height: 0;
+	display: block;
+}
+.rp-tlt{
+	margin-top:10px;
+}
+.rp-tlt a{
+	color:#333;
+}
+.rp-tlt h4{
+	margin: 0;
+    font-weight: 400;
+}
+/*** Recent posts ***/
+.recentpublish-posts{
+	display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: -15px;
 }
