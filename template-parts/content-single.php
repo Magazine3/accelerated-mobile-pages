@@ -31,11 +31,11 @@
 					the_content();
 
 					wp_link_pages( array(
-						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'amp_wordpress_theme' ) . '</span>',
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'amp-wordpress-theme' ) . '</span>',
 						'after'       => '</div>',
 						'link_before' => '<span>',
 						'link_after'  => '</span>',
-						'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'amp_wordpress_theme' ) . ' </span>%',
+						'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'amp-wordpress-theme' ) . ' </span>%',
 						'separator'   => '<span class="screen-reader-text">, </span>',
 					) );
 

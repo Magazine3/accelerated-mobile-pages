@@ -18,7 +18,7 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="page-title archive-title"><?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'amp_wordpress_theme' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: %s', 'amp-wordpress-theme' ), '<span>' . get_search_query() . '</span>' );
 				?></h1>
 			</header><!-- .page-header -->
 

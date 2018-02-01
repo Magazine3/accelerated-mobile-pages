@@ -21,7 +21,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amp_wordpress_theme' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amp-wordpress-theme' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -34,7 +34,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'amp_wordpress_theme' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'amp-wordpress-theme' ),
 							array(
 								'span' => array(
 									'class' => array(),

@@ -1,8 +1,8 @@
 /*!
 Theme Name: AMP wordpress Theme
-Theme URI: http://underscores.me/
+Theme URI: https://ampforwp.com/themes/
 Author: Underscores.me
-Author URI: http://underscores.me/
+Author URI: http://ampforwp.com 
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -1309,6 +1309,8 @@ body a, .rp-list{
     width: 100%;
     clear: both;
     display: flex;
+    padding:10px 0px;
+    min-height: 60px;
 }
 .hamburger-menu{
 	display: flex;
