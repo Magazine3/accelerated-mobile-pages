@@ -37,7 +37,6 @@
 				<?php } ?>
 				<div class="rr">
 					<span>All Rights Reserved </span>
-					<a href="#">View Non-AMP Version</a>
 				</div>
 			</div>
 		</div>

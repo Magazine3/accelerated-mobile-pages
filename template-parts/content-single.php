@@ -127,9 +127,9 @@
                     $args=array(
 //	                        'category__in' => $category_ids,
                     'post__not_in' => array($post->ID),
-                    'posts_per_page'=> $number_to_posts, // Number of related posts that will be shown.
+                    'posts_per_page'=> 6, // Number of related posts that will be shown.
                     'showposts'=> esc_attr( get_theme_mod( 'number-of-posts' , '6') ) ,
-                    'caller_get_posts'=>1
+                    'ignore_sticky_posts'=>1
                     );
                     $my_query = new wp_query( $args );
                     if ($my_query->have_posts()) { ?>

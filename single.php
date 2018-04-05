@@ -11,13 +11,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div class="container">
-				<div class="breadcrumbs">
-					<?php if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb('<p id="br-crumbs">','</p>');
-					} ?>
+			<?php if ( function_exists('yoast_breadcrumb') ) { ?>
+				<div class="container">
+					<div class="breadcrumbs">
+						<?php yoast_breadcrumb('<p id="br-crumbs">','</p>'); ?>
+					</div>
 				</div>
-			</div>
+			<?php } ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
