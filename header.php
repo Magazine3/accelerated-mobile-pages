@@ -53,7 +53,7 @@
 	                if ( has_custom_logo() ) {
 	                    echo '<img src="'. esc_url( $logo[0] ) .'">';
 	                } else {
-	                    echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
+	                    echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1><span>'. esc_attr( get_bloginfo( 'description', 'display' ) ) .'</span>';
 	                } ?>
 	              </a>
 	            </div><!-- /.logo -->

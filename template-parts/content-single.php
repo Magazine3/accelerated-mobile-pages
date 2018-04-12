@@ -62,19 +62,9 @@
 			</div>
 		</div>
 		<div class="left-part">
-			<div class="social-share-btns">
-				<span>share</span>
-				<ul>
-					<li><a class="icon-twitter ic-1" href="#"></a></li>
-					<li><a class="icon-facebook2 ic-2" href="#"></a></li>
-					<li><a class="icon-pinterest ic-3" href="#"></a></li>
-					<li><a class="icon-googleplus ic-4" href="#"></a></li>
-					<li><a class="icon-linkedin2 ic-5" href="#"></a></li>
-				</ul>
-			</div>
 			<div class="post-athr">
 				<span class="pb-txt">Published by</span>
-				<span class="pb-athr"><?php the_author_link(); ?></span>
+				<span class="pb-athr"><?php the_author_posts_link(); ?></span>
 			</div>
 			<div class="tgs">
 				<?php the_tags( '<span>Tags:</span>', ' ', ' ' ); ?> 
@@ -116,51 +106,5 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer container">
-		<div class="recent-post">
-			<h3><?php echo get_theme_mod('recently-stories-text', 'Recent posts')?></h3>
-			<?php  $orig_post = $post;
-                global $post;
-                $categories = get_the_category($post->ID);
-                if ($categories) {
-                    $category_ids = array();
-                    foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
-                    $args=array(
-//	                        'category__in' => $category_ids,
-                    'post__not_in' => array($post->ID),
-                    'posts_per_page'=> 6, // Number of related posts that will be shown.
-                    'showposts'=> esc_attr( get_theme_mod( 'number-of-posts' , '6') ) ,
-                    'ignore_sticky_posts'=>1
-                    );
-                    $my_query = new wp_query( $args );
-                    if ($my_query->have_posts()) { ?>
-				    <div class="recentpublish-posts">
-					<?php
-                        while( $my_query->have_posts() ) {
-                            $my_query->the_post(); ?>
-								<div class="fsp">
-									<?php if ( has_post_thumbnail() ) { ?>
-							        <div class="fsp-img">
-										<a href="<?php the_permalink();?>"><?php the_post_thumbnail('module-1'); ?></a>
-									</div>
-							        <?php }
-							        else { 
-							    		echo '';
-							    	}?>
-							        <div class="fsp-cnt">
-										<div class="category-lists">
-								           <?php the_category( ' ' ); ?>
-								        </div><!-- /.category-lists -->
-										<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-										<?php the_excerpt(); ?>
-										<span class="posted-dt"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></span>
-									</div>
-							    </div><!-- /. post-list --> 
-                    	<?php 	} // while?>
-                    </div><!-- /.recentpublish-posts -->
-                   <?php }	// if category
-                $post = $orig_post;
-            wp_reset_postdata();  ?>				
-		<?php }  ?>
-		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
