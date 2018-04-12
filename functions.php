@@ -238,3 +238,13 @@ function amp_wp_theme_register_required_plugins() {
 
 	tgmpa( $plugins, $config );
 }
+
+
+add_action( 'init', 'amp_wp_theme_add_editor_styles' );
+/**
+ * Apply theme's stylesheet to the visual editor.
+  * @uses add_editor_style() Links a stylesheet to visual editor
+ */
+function amp_wp_theme_add_editor_styles() {
+	add_editor_style( 'custom-editor-style.css');
+}
