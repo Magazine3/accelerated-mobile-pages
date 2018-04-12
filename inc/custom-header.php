@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package amp_wordpress_theme
+ * @package amp-wordpress-theme
  */
 
 /**

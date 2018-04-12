@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package amp_wordpress_theme
+ * @package amp-wordpress-theme
  */
 
 /**

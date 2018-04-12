@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package amp_wordpress_theme
+ * @package amp-wordpress-theme
  */
 
 /*

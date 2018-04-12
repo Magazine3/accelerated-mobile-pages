@@ -1,13 +1,13 @@
 /*!
 Theme Name: AMP WordPress Theme
 Theme URI: https://ampforwp.com/themes/
-Author: Underscores.me
+Author: AMPforWP
 Author URI: http://ampforwp.com 
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: amp_wordpress_theme
+Text Domain: amp-wordpress-theme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -1525,6 +1525,7 @@ body a, .rp-list{
 .f-w{
 	display: inline-flex;
     width: 100%;
+    flex-wrap: wrap;
 }
 .w-bl {
     margin-left: 0;

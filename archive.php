@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package amp_wordpress_theme
+ * @package amp-wordpress-theme
  */
 
 get_header(); ?>
@@ -36,8 +36,8 @@ get_header(); ?>
 			endwhile; ?>
 
 			<div class="pagination">
-                   <div class="pagination-prev"><?php previous_posts_link( $label ); ?> </div>
-                   <div class="pagination-next"><?php next_posts_link( $label , $max_pages ); ?> </div>    
+                   <div class="pagination-prev"><?php previous_posts_link(); ?> </div>
+                   <div class="pagination-next"><?php next_posts_link(); ?> </div>    
             </div>
 
 		<?php else :

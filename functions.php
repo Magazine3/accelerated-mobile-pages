@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package amp_wordpress_theme
+ * @package amp-wordpress-theme
  */
 
 if ( ! function_exists( 'amp_wordpress_theme_setup' ) ) :

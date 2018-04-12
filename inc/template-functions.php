@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package amp_wordpress_theme
+ * @package amp-wordpress-theme
  */
 
 /**
