@@ -337,3 +337,14 @@ proprietary programs.  If your program is a subroutine library, you may
 consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.
+
+
+
+Font Poppins, Copyright Indian Type Foundry
+License: SIL Open Font License, Version 1.1
+Source: http://scripts.sil.org/OFL_web
+
+
+Image used in screenshot.png, by Sarah Götze
+License: CC0 license (https://unsplash.com/license)
+Source: https://unsplash.com/photos/ODua_Pc7VQY
