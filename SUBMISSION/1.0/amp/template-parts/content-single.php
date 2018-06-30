@@ -76,7 +76,7 @@
 			
 	   		<?php if(has_post_thumbnail()){?>
 			   <div class="related-posts">
-					<h3><?php echo get_theme_mod( 'releated-article-text', 'Related Posts' )?></h3> 
+					<h3><?php echo esc_attr(get_theme_mod( 'releated-article-text', 'Related Posts' ));?></h3> 
 			    	<?php $categories = get_the_category($post->ID);
 		            if ($categories) { $category_ids = array();
 		            foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;

@@ -48,9 +48,12 @@
 				<div class="logo">
 	              <a href="<?php echo esc_url( home_url() ); ?>">
 	                <?php 
-	                $custom_logo_id = get_theme_mod( 'custom_logo' );
-	                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-	                if ( has_custom_logo() ) {
+	                $custom_logo_id = esc_attr( get_theme_mod( 'custom_logo' ) );
+
+	                if( $custom_logo_id ) {
+	                	$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	                }
+	                if ( has_custom_logo() ) {       	
 	                    echo '<img src="'. esc_url( $logo[0] ) .'">';
 	                } else {
 	                    echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1><span>'. esc_attr( get_bloginfo( 'description', 'display' ) ) .'</span>';
