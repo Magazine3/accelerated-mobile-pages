@@ -1664,7 +1664,7 @@ body a, .rp-list{
 }
 .entry-title {
     font-size: 48px;
-    line-height: 58px;
+    line-height: 1.2px;
     color: #333;
     margin: 0;
     padding-top: 15px;
@@ -2066,6 +2066,7 @@ body a, .rp-list{
 }
 
 /*** Responsive ***/
+
 @media(max-width:768px){
 	.fsp{
 	    flex-basis: calc(100% - 30px);
@@ -2079,9 +2080,34 @@ body a, .rp-list{
 	    width: 54%;
 	    float: left;
 	}
+	/** Single page **/
+	.entry-content {
+ 	   display: inline-block;
+ 	   margin-top: 20px;
+	}
+	.right-part {
+	    width: 100%;
+	    margin-left: 0;
+	}
+	.left-part {
+	    width: 100%;
+	    margin-top: 20px;
+	}
+	.rp-img {
+	    width: 200px;
+	    float: left;
+	    margin-right: 15px;
+	}
+	.rp-tlt {
+	    display: flex;
+	    font-size: 20px;
+	    line-height: 1.4;
+	    font-weight: 600;
+	}
+	.rp-list{display:inline-block;}
 }
 @media (max-width: 480px){
-	.site-main .container{padding:0;overflow: hidden;}
+	.home .site-main .container{padding:0;}
 	.fsp {
 	    border: none;
 	    padding: 0;
@@ -2102,4 +2128,49 @@ body a, .rp-list{
 	    float: none;
 	}
 	.pagination-next{margin-top:20px;}
+
+	/*** Single ***/
+	.entry-title {
+		font-size: 36px;
+	}
+	.rp-tlt, .rp-img img{
+		width:100%;
+	}
+	.rp-img {
+	    width: 100%;
+	    float: none;
+	    margin-right: 0px;
+	}
+	.nav-links .nav-previous {
+	    float: none;
+	    width: 100%;
+	}
+	.nav-links .nav-next {
+	    float: none;
+	    width: 100%;
+	}
+	.nav-previous a{
+		margin-bottom: 45px;
+    	display: inline-block;
+	}
+	#respond {
+    	padding: 25px;
+    }
+    #reply-title {
+    	font-size: 20px;
+    	margin:10px 0px;
+    }
+    .logged-in-as{
+    	font-size: 14px;
+    	margin: 6px 0px;
+    }
+    .comment-respond label{
+    	padding: 15px 0 10px 0;
+    }
+	#comment {
+	    padding: 15px 20px;
+	}
+	.form-submit .submit{
+		padding: 16px 25px 16px 25px;
+	}
 }
