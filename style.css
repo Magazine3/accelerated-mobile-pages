@@ -286,7 +286,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0;
 }
 
 address {
@@ -1465,7 +1465,7 @@ body a, .rp-list{
 .fsp h2{
     margin:0px 0px 5px 0px;
     font-size:20px;
-    line-height:25px;
+    line-height:1.4;
     font-weight:500;
     padding: 0;
 }
@@ -1524,6 +1524,21 @@ body a, .rp-list{
     font-size: 14px;
     display: inline-block;
 }
+.also_see{
+	width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    font-size: 18px;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.page-links a{
+	color: #005be2;
+    padding: 0px 10px;
+}
+.content-pt .navigation {margin: 0;}
 /*** Footer ***/
 .site-footer{
 	display: inline-block;
@@ -1774,6 +1789,26 @@ body a, .rp-list{
 .content-pt a{
 	margin:10px 0px;
 	display: inline-block;
+}
+.content-pt blockquote p {
+    font-size: 34px;
+    line-height: 1.4;
+    font-weight: 700;
+    position: relative;
+    padding: 30px 0 0 0;
+    margin-bottom: 20px;
+}
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+blockquote p:before {
+    content: "";
+    border-top: 8px solid #000;
+    width: 115px;
+    line-height: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
 }
 .post-athr, .tgs, .pt-dt {
     margin-top: 20px;
@@ -2032,6 +2067,7 @@ body a, .rp-list{
     background-color: #fbfbfb;
     padding: 50px;
     border: 1px solid #ebebeb;
+    margin-top:30px;
 }
 #reply-title{
 	font-size: 24px;
@@ -2106,9 +2142,18 @@ body a, .rp-list{
 	    display: flex;
 	    font-size: 20px;
 	    line-height: 1.4;
-	    font-weight: 600;
+	}
+	.rp-tlt h4{
+		font-weight: 700;
 	}
 	.rp-list{display:inline-block;}
+	.fsp h2{
+    	font-size:24px;
+    	font-weight: 700;
+    }
+    .footer-menu ul li{
+    	margin-bottom:10px;
+    }
 }
 @media (max-width: 480px){
 	.home .site-main .container{padding:0;}
@@ -2161,15 +2206,15 @@ body a, .rp-list{
     	padding: 25px;
     }
     #reply-title {
-    	font-size: 20px;
+    	font-size: 18px;
     	margin:10px 0px;
     }
-    .logged-in-as{
+    .content-pt .logged-in-as{
     	font-size: 14px;
     	margin: 6px 0px;
     }
     .comment-respond label{
-    	padding: 15px 0 10px 0;
+    	padding: 10px 0 10px 0;
     }
 	#comment {
 	    padding: 15px 20px;
@@ -2177,4 +2222,13 @@ body a, .rp-list{
 	.form-submit .submit{
 		padding: 16px 25px 16px 25px;
 	}
+	.post-img .featured_caption{
+		width: 100%;
+    	padding: 10px 15px;
+	}
+	.content-pt blockquote p {
+	    font-size: 20px;
+	    line-height: 1.65;
+	}
+
 }
