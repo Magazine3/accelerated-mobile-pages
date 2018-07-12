@@ -1438,6 +1438,7 @@ body a, .rp-list{
    margin-top: 20px;
     clear: both;
     width: 100%;
+    overflow: hidden;
 }
 .loop-wrapper{
 	display: flex;
@@ -1664,7 +1665,7 @@ body a, .rp-list{
 }
 .entry-title {
     font-size: 48px;
-    line-height: 1.2px;
+    line-height: 1.2;
     color: #333;
     margin: 0;
     padding-top: 15px;
