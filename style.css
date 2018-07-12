@@ -1297,6 +1297,9 @@ a.lb-x:after {
     color: #fff;
     width:80%;
 }
+.lb-btn .search-field:focus, .lb-btn .search-field:hover{
+	color:#fff;
+}
 /*** Transitions ***/
 body a, .rp-list{
     transition: all 0.3s ease-in-out 0s;

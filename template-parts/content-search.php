@@ -9,27 +9,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-				amp_wordpress_theme_posted_on();
-				amp_wordpress_theme_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php amp_wordpress_theme_post_thumbnail(); ?>
-
-	<div class="entry-summary">
+<article id="post-<?php the_ID(); ?>" <?php post_class('fsp'); ?>>
+	<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+		<span class="sticky-post"><?php _e( 'Featured', 'amp' ); ?></span>
+	<?php endif; ?>
+	<div class="fsp-img">
+		<a href="<?php the_permalink();?>"><?php the_post_thumbnail('module-1'); ?></a>
+	</div>
+	<div class="fsp-cnt">
+		<div class="category-lists">
+           <?php the_category( ' ' ); ?>
+        </div><!-- /.category-lists -->
+		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php amp_wordpress_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<span class="posted-dt"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></span>
+	</div>
+</article><!-- #post-## -->
 </article><!-- #post-<?php the_ID(); ?> -->
