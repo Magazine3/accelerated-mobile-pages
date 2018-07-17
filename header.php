@@ -29,7 +29,7 @@
 			<div class="head">
 				<div class="hamburger-menu drawer drawer--left">
 	                <button type="button" class="drawer-toggle drawer-hamburger">
-	                  <span class="sr-only">toggle navigation</span>
+	                  <span class="screen-reader-text"><?php esc_html_e( 'Menu', 'amp' ); ?></span>
 	                  <span class="drawer-hamburger-icon"></span>
 	                </button>
 	                <nav class="drawer-nav" role="navigation">
@@ -64,16 +64,15 @@
                     <a class="lb icon-search2" href="#search"></a>
                     <div class="lb-btn"> 
                         <div class="lb-t" id="search">
-                           <form role="search" method="get" class="mk-fullscreen-searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                           <form role="search" method="get" class="amp-fullscreen-searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		                      <label>
-		                          <span class="text-above-search-bar"></span>
 		                          <input type="search" class="search-field"
 		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'amp' ) ?>"
 		                              value="<?php echo esc_attr( get_search_query() ); ?>" name="s"
-		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp' ) ?>" id="mk-fullscreen-search-input"/>
+		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp' ) ?>" id="amp-fullscreen-search-input"/>
 		                      </label>
 		                      <label class="search-button search-overlay">
-		                          <i class="fa fa-search" aria-hidden="true"></i>
+		                          <i aria-hidden="true"></i>
 		                      <input type="submit" class="search-submit"
 		                          value="<?php echo esc_attr_x( '', 'label', 'amp' ) ?>" />
 		                      </label>

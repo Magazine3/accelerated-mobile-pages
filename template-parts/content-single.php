@@ -15,15 +15,17 @@
 		</div>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+    <?php if ( has_post_thumbnail() ) { ?>
 	<div class="post-img">
-		<?php
+		<?php 
 		$get_description = get_post(get_post_thumbnail_id())->post_excerpt;
 		the_post_thumbnail();
 		  if(!empty($get_description)){//If description is not empty show the div
 		  echo '<div class="featured_caption">' . $get_description . '</div>';
-		  }
+		  } 
 		?>
 	</div>
+    <?php } ?>
 	<div class="entry-content container">
 		<div class="right-part">
 			<div class="content-pt">
@@ -55,7 +57,7 @@
 			</div>
 			<?php the_post_navigation(); ?>
 			<div class="cmts">
-				<span class="view-cmts">VIEW COMMENTS</span>
+				<span class="view-cmts"><?php esc_attr_e( 'View Comments', 'amp' ); ?></span>
 				<?php if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif; ?>
@@ -63,12 +65,14 @@
 		</div>
 		<div class="left-part">
 			<div class="post-athr">
-				<span class="pb-txt">Published by</span>
+				<span class="pb-txt"><?php esc_attr_e( 'Published by', 'amp' ); ?></span>
 				<span class="pb-athr"><?php the_author_posts_link(); ?></span>
 			</div>
-			<div class="tgs">
-				<?php the_tags( '<span>Tags:</span>', ' ', ' ' ); ?> 
+            <?php if(has_tag()) { ?>
+            <div class="tgs">
+				<?php the_tags( '<div class="tags">' . __( 'Tags', 'amp' ), ' ','</div>'); ?> 
 			</div>
+            <?php } ?>
 			<div class="pt-dt">
 				<span class="posted-dt"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></span>
 				<?php edit_post_link(); ?>
@@ -100,7 +104,7 @@
 						</div><!-- /.latest-posts -->
 				   <?php  endwhile;
 				} wp_reset_postdata(); } ?>
-		</div><!-- /.releted-posts -->
+		</div><!-- /.related-posts -->
 		<?php }  ?>
 		</div>
 	</div><!-- .entry-content -->

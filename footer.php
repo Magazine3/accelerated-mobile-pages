@@ -36,7 +36,9 @@
 				</div>
 				<?php } ?>
 				<div class="rr">
-					<span>All Rights Reserved </span>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amp' ) ); ?>" class="imprint">
+					<?php printf( __( 'Proudly powered by %s', 'amp' ), 'amp' ); ?>
+				</a>
 				</div>
 			</div>
 		</div>
