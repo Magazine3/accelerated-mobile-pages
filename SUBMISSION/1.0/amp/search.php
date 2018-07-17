@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package amp-wordpress-theme
+ * @package amp
  */
 
 get_header(); ?>

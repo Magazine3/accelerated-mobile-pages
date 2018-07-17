@@ -2,7 +2,7 @@
 /**
  * AMP wordpress Theme Theme Customizer
  *
- * @package amp-wordpress-theme
+ * @package amp
  */
 
 /**

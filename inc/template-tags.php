@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package amp-wordpress-theme
+ * @package amp
  */
 
 if ( ! function_exists( 'amp_wordpress_theme_posted_on' ) ) :
