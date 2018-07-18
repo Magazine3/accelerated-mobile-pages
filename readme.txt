@@ -9,7 +9,7 @@ License URI: LICENSE
 
 == Description ==
 
-A Minimal Theme that makes your AMP and Non-AMP version look same.
+Accelerated Mobile Pages WordPress theme is a minimal and fast theme that makes your AMP and Non-AMP version look same.
 
 == Installation ==
 

@@ -95,7 +95,7 @@
 						<div class="rp-list">
 							<?php if ( has_post_thumbnail()) { ?>
 							<div class="rp-img">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('module-1'); ?></a>
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('accelerated-mobile-pages-img-1'); ?></a>
 							</div><!-- / latest-post -->
 							<?php } ?>
 							<div class="rp-tlt">				

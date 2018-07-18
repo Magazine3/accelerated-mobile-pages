@@ -41,7 +41,7 @@ if ( ! function_exists( 'accelerated_mobile_pages_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-			add_image_size('module-1', 347, 189, true);
+			add_image_size('accelerated-mobile-pages-img-1', 347, 189, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -158,7 +158,7 @@ require get_template_directory() . '/inc/customizer.php';
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
-function wpdocs_custom_excerpt_length( $length ) {
+function accelerated_mobile_pages_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
