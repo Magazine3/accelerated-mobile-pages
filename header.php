@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package amp
+ * @package accelerated-mobile-pages
  */
 
 ?>
@@ -22,14 +22,14 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amp' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'accelerated-mobile-pages' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="head">
 				<div class="hamburger-menu drawer drawer--left">
 	                <button type="button" class="drawer-toggle drawer-hamburger">
-	                  <span class="screen-reader-text"><?php esc_html_e( 'Menu', 'amp' ); ?></span>
+	                  <span class="screen-reader-text"><?php esc_html_e( 'Menu', 'accelerated-mobile-pages' ); ?></span>
 	                  <span class="drawer-hamburger-icon"></span>
 	                </button>
 	                <nav class="drawer-nav" role="navigation">
@@ -64,17 +64,17 @@
                     <a class="lb icon-search2" href="#search"></a>
                     <div class="lb-btn"> 
                         <div class="lb-t" id="search">
-                           <form role="search" method="get" class="amp-fullscreen-searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                           <form role="search" method="get" class="accelerated-mobile-pages-fullscreen-searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		                      <label>
 		                          <input type="search" class="search-field"
-		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'amp' ) ?>"
+		                              placeholder="<?php echo esc_attr_x( 'Search...', 'label', 'accelerated-mobile-pages' ) ?>"
 		                              value="<?php echo esc_attr( get_search_query() ); ?>" name="s"
-		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'amp' ) ?>" id="amp-fullscreen-search-input"/>
+		                              title="<?php echo esc_attr_x( 'Search for:', 'label', 'accelerated-mobile-pages' ) ?>" id="accelerated-mobile-pages-fullscreen-search-input"/>
 		                      </label>
 		                      <label class="search-button search-overlay">
 		                          <i aria-hidden="true"></i>
 		                      <input type="submit" class="search-submit"
-		                          value="<?php echo esc_attr_x( '', 'label', 'amp' ) ?>" />
+		                          value="<?php echo esc_attr_x( '', 'label', 'accelerated-mobile-pages' ) ?>" />
 		                      </label>
 		                      <!-- <div class="overlay-search"></div> -->
 		                  </form>

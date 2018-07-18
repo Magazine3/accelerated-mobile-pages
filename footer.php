@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package amp
+ * @package accelerated-mobile-pages
  */
 
 ?>
@@ -36,8 +36,8 @@
 				</div>
 				<?php } ?>
 				<div class="rr">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amp' ) ); ?>" class="imprint">
-					<?php printf( __( 'Proudly powered by %s', 'amp' ), 'amp' ); ?>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'accelerated-mobile-pages' ) ); ?>" class="imprint">
+					<?php printf( __( 'Proudly powered by %s', 'accelerated-mobile-pages' ), 'accelerated-mobile-pages' ); ?>
 				</a>
 				</div>
 			</div>

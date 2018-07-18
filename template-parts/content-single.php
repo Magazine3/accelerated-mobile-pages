@@ -33,11 +33,11 @@
 					the_content();
 
 					wp_link_pages( array(
-						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'amp' ) . '</span>',
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'accelerated-mobile-pages' ) . '</span>',
 						'after'       => '</div>',
 						'link_before' => '<span>',
 						'link_after'  => '</span>',
-						'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'amp' ) . ' </span>%',
+						'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'accelerated-mobile-pages' ) . ' </span>%',
 						'separator'   => '<span class="screen-reader-text">, </span>',
 					) );
 
@@ -57,7 +57,7 @@
 			</div>
 			<?php the_post_navigation(); ?>
 			<div class="cmts">
-				<span class="view-cmts"><?php esc_attr_e( 'View Comments', 'amp' ); ?></span>
+				<span class="view-cmts"><?php esc_attr_e( 'View Comments', 'accelerated-mobile-pages' ); ?></span>
 				<?php if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif; ?>
@@ -65,12 +65,12 @@
 		</div>
 		<div class="left-part">
 			<div class="post-athr">
-				<span class="pb-txt"><?php esc_attr_e( 'Published by', 'amp' ); ?></span>
+				<span class="pb-txt"><?php esc_attr_e( 'Published by', 'accelerated-mobile-pages' ); ?></span>
 				<span class="pb-athr"><?php the_author_posts_link(); ?></span>
 			</div>
             <?php if(has_tag()) { ?>
             <div class="tgs">
-				<?php the_tags( '<div class="tags">' . __( 'Tags', 'amp' ), ' ','</div>'); ?> 
+				<?php the_tags( '<div class="tags">' . __( 'Tags', 'accelerated-mobile-pages' ), ' ','</div>'); ?> 
 			</div>
             <?php } ?>
 			<div class="pt-dt">

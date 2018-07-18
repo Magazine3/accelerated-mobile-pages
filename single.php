@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package amp
+ * @package accelerated-mobile-pages
  */
 
 get_header(); ?>

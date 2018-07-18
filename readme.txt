@@ -1,19 +1,15 @@
-=== AMP ===
-
+=== Accelerated Mobile Pages ===
 Contributors: ahmedkaludi
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments
-
 Requires at least: 4.0
 Tested up to: 4.9.7
 Stable tag: 1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called AMP wordpress Theme.
-
 == Description ==
 
-Description
+A Minimal Theme that makes your AMP and Non-AMP version look same.
 
 == Installation ==
 
@@ -24,12 +20,14 @@ Description
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
+We have tested this theme with majority of the plugins and it works flawlessly with them. If you face any compatibility issues with our theme, then let us know, we will help you fix them.
 
-AMP wordpress Theme includes support for Infinite Scroll in Jetpack.
+= How to display the AMP version of this theme? =
+The AMP compatibility will be added with you install the AMP for WP plugin.
+
 
 == Changelog ==
-
-= 1.0 - May 12 2015 =
+= 1.0 - July 18 2018 =
 * Initial release
 
 == Credits ==

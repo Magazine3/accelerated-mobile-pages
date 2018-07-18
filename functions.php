@@ -1,13 +1,13 @@
 <?php
 /**
- * AMP wordpress Theme functions and definitions
+ * Accelerated Mobile Pages functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package amp
+ * @package accelerated-mobile-pages
  */
 
-if ( ! function_exists( 'amp_setup' ) ) :
+if ( ! function_exists( 'accelerated_mobile_pages_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'amp_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function amp_setup() {
+	function accelerated_mobile_pages_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on AMP wordpress Theme, use a find and replace
-		 * to change 'amp' to the name of your theme in all the template files.
+		 * If you're building a theme based on Accelerated Mobile Pages, use a find and replace
+		 * to change 'accelerated-mobile-pages' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'amp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'accelerated-mobile-pages', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -45,9 +45,9 @@ if ( ! function_exists( 'amp_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'header-menu' => esc_html__( 'Header Menu', 'amp' ),
-			'primary-menu' => esc_html__( 'Primary', 'amp' ),
-			'footer-menu' => esc_html__( 'Footer', 'amp' ),
+			'header-menu' => esc_html__( 'Header Menu', 'accelerated-mobile-pages' ),
+			'primary-menu' => esc_html__( 'Primary', 'accelerated-mobile-pages' ),
+			'footer-menu' => esc_html__( 'Footer', 'accelerated-mobile-pages' ),
 		) );
 
 		/*
@@ -63,7 +63,7 @@ if ( ! function_exists( 'amp_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'amp_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'accelerated_mobile_pages_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -84,7 +84,7 @@ if ( ! function_exists( 'amp_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'amp_setup' );
+add_action( 'after_setup_theme', 'accelerated_mobile_pages_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -93,53 +93,48 @@ add_action( 'after_setup_theme', 'amp_setup' );
  *
  * @global int $content_width
  */
-function amp_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'amp_content_width', 640 );
+function accelerated_mobile_pages_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'accelerated_mobile_pages_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'amp_content_width', 0 );
+add_action( 'after_setup_theme', 'accelerated_mobile_pages_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function amp_widgets_init() {
+function accelerated_mobile_pages_widgets_init() {
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget', 'amp' ),
+		'name'          => esc_html__( 'Footer Widget', 'accelerated-mobile-pages' ),
 		'id'            => 'footer-widget',
-		'description'   => esc_html__( 'Add widgets here.', 'amp' ),
+		'description'   => esc_html__( 'Add widgets here.', 'accelerated-mobile-pages' ),
 		'before_widget' => '<div class="w-bl">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
 }
-add_action( 'widgets_init', 'amp_widgets_init' );
+add_action( 'widgets_init', 'accelerated_mobile_pages_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function amp_scripts() {
-	wp_enqueue_style( 'amp-style', get_stylesheet_uri() );
+function accelerated_mobile_pages_scripts() {
+	wp_enqueue_style( 'accelerated-mobile-pages-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'amp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'accelerated-mobile-pages-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
      
     wp_enqueue_script( 'drawer-min', get_template_directory_uri() . '/js/drawer.min.js', array( 'jquery' ), '', false );
     wp_enqueue_script( 'iscroll', get_template_directory_uri() . '/js/iscroll.js', array( 'jquery' ), '', false );
     wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '', false );
-	wp_enqueue_script( 'amp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'accelerated-mobile-pages-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'amp_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+add_action( 'wp_enqueue_scripts', 'accelerated_mobile_pages_scripts' );
 
 /**
  * Custom template tags for this theme.
@@ -175,7 +170,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
 
 
-add_action( 'tgmpa_register', 'amp_register_required_plugins' );
+add_action( 'tgmpa_register', 'accelerated_mobile_pages_register_required_plugins' );
 /**
  * Register the required plugins for this theme.
  * The variable passed to tgmpa_register_plugins() should be an array of plugin
@@ -184,7 +179,7 @@ add_action( 'tgmpa_register', 'amp_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function amp_register_required_plugins() {
+function accelerated_mobile_pages_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -225,11 +220,11 @@ function amp_register_required_plugins() {
 }
 
 
-add_action( 'init', 'amp_add_editor_styles' );
+add_action( 'init', 'accelerated_mobile_pages_add_editor_styles' );
 /**
  * Apply theme's stylesheet to the visual editor.
   * @uses add_editor_style() Links a stylesheet to visual editor
  */
-function amp_add_editor_styles() {
+function accelerated_mobile_pages_add_editor_styles() {
 	add_editor_style( 'custom-editor-style.css');
 }

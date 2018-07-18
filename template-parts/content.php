@@ -4,13 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package amp
+ * @package accelerated-mobile-pages
  */
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('fsp'); ?>>
 	<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-		<span class="sticky-post"><?php _e( 'Featured', 'amp' ); ?></span>
+		<span class="sticky-post"><?php _e( 'Featured', 'accelerated-mobile-pages' ); ?></span>
 	<?php endif; ?>
 	<div class="fsp-img">
 		<a href="<?php the_permalink();?>"><?php the_post_thumbnail('module-1'); ?></a>
