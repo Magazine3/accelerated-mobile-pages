@@ -3,9 +3,9 @@ Contributors: ahmedkaludi
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments
 Requires at least: 4.0
 Tested up to: 4.9.7
-Stable tag: 1.0
+Stable tag: 1.2
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 == Description ==
 
@@ -25,12 +25,66 @@ We have tested this theme with majority of the plugins and it works flawlessly w
 = How to display the AMP version of this theme? =
 The AMP compatibility will be added with you install the AMP for WP plugin.
 
+== Copyright ==
+
+Accelerated Mobile Pages WordPress Theme, Copyright 2018 xtheme.net
+Accelerated Mobile Pages is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+== Third-party Resources ==
+
+normalize.css , Copyright Nicolas Gallagher and Jonathan Neal
+License: MIT
+Source: https://necolas.github.io/normalize.css
+
+Underscores , Copyright Automattic, Inc 
+License: GPLv2 or later
+Source: https://underscores.me
+
+icomoon Icon Font, Copyright Keyamoon
+License: GPL / CC BY 4.0
+Source: https://github.com/Keyamoon/IcoMoon-Free/
+
+TGM Plugin Activation, Copyright LukyVj
+License: GPL-2.0 or later
+Source: https://github.com/TGMPA/TGM-Plugin-Activation
+
+drawer.js & drawer.min.js, Copyright blivesta <design@blivesta.com> (http://blivesta.com/)
+License: MIT
+Source: http://git.blivesta.com/drawer
+
+skip-link-focus-fix.js, Copyright _s (Automattic)
+License: MIT
+Source: https://git.io/vWdr2
+
+iScroll, Copyright Matteo Spinelli  
+License: MIT
+Source: https://github.com/cubiq/iscroll
+
+Font Poppins, Copyright Indian Type Foundry
+License: SIL Open Font License, Version 1.1
+Source: http://scripts.sil.org/OFL_web
+
+Image used in screenshot.png, by Sarah Götze
+License: CC0 license (https://unsplash.com/license)
+Source: https://unsplash.com/photos/ODua_Pc7VQY
+
 
 == Changelog ==
-= 1.0 - July 18 2018 =
+= 1.2 - July 18 2018 =
+* License updated
+
+= 1.1 - July 18 2018 =
+* Few Bug Fixes
+
+= 1.0 - May 18 2018 =
 * Initial release
-
-== Credits ==
-
-* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
