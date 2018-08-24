@@ -1722,6 +1722,13 @@ body a, .rp-list{
     width: 100%;
     margin-top:40px;
 }
+.page-template-page-fullwidth .site-content{
+	width:100%;
+	padding:0px 20px;
+}
+.entry-content.fullwidth{
+	display: inline-block;
+}
 .right-part{
     width: 72%;
     margin-left: 60px;
