@@ -161,7 +161,7 @@ require get_template_directory() . '/inc/customizer.php';
 function accelerated_mobile_pages_custom_excerpt_length( $length ) {
     return 20;
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'accelerated_mobile_pages_custom_excerpt_length', 999 );
 
 
 /**
